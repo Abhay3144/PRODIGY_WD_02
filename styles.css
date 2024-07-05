@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background */
+    background-image: url('v1.jpg'), linear-gradient(to bottom right, #ffffff, #f0f0f0); /* Background image with gradient */
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.stopwatch {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 0.5s ease-out, fadeIn 1s ease-out; /* Animations for sliding in and fading in */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#display {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333;
+    animation: pulse 1.5s infinite; /* Apply pulsating animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    font-size: 1em;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.95); /* Scale down when clicked */
+}
+
+.laps {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    animation: slideIn 0.5s ease-out, fadeIn 1s ease-out; /* Animations for sliding in and fading in */
+}
+
+#lapTimes {
+    list-style-type: none;
+    padding: 0;
+}
